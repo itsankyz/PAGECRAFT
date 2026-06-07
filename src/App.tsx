@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { motion } from 'motion/react';
 import Header from './components/Header';
 import ToolkitBento from './components/ToolkitBento';
@@ -6,10 +7,14 @@ import ArtisanDesk from './components/ArtisanDesk';
 import Donation from './components/Donation';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+import Support from './pages/Support';
+import Contact from './pages/Contact';
 import { ToolMode } from './types';
 import { Layers, Feather } from 'lucide-react';
 
-export default function App() {
+function Home() {
   const [selectedTool, setSelectedTool] = useState<ToolMode>('merge');
 
   // Scrolling References
@@ -128,5 +133,19 @@ export default function App() {
 
       <Footer />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

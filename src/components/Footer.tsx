@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Feather } from 'lucide-react';
 
 export default function Footer() {
@@ -20,10 +21,10 @@ export default function Footer() {
         </div>
 
         <div className="flex gap-8">
-          <a className="font-mono text-xs text-[#78767d] hover:text-[#FF6B35] transition-colors" href="#">Terms</a>
-          <a className="font-mono text-xs text-[#78767d] hover:text-[#FF6B35] transition-colors" href="#">Privacy</a>
-          <a className="font-mono text-xs text-[#78767d] hover:text-[#FF6B35] transition-colors" href="#">Support</a>
-          <a className="font-mono text-xs text-[#78767d] hover:text-[#FF6B35] transition-colors" href="#">Contact</a>
+          <Link className="font-mono text-xs text-[#78767d] hover:text-[#FF6B35] transition-colors" to="/terms">Terms</Link>
+          <Link className="font-mono text-xs text-[#78767d] hover:text-[#FF6B35] transition-colors" to="/privacy">Privacy</Link>
+          <Link className="font-mono text-xs text-[#78767d] hover:text-[#FF6B35] transition-colors" to="/support">Support</Link>
+          <Link className="font-mono text-xs text-[#78767d] hover:text-[#FF6B35] transition-colors" to="/contact">Contact</Link>
         </div>
       </div>
     </footer>
