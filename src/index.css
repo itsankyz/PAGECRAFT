@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Playfair+Display:ital,wght@1,500;1,700&family=Space+Grotesk:wght@500;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-sans: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-accent: "Playfair Display", serif;
+  --font-label-accent: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-primary: #00000b;
+  --color-craft-coral: #FF6B35;
+  --color-surface-container-low: #fbf9f4;
+  --color-outline: #78767d;
+}
+
+/* Custom Artisan Utility Styles */
+.hand-drawn-border {
+  border: 2.5px solid #00000b;
+  border-radius: 4px 10px 4px 8px / 9px 5px 6px 12px;
+  box-shadow: 4px 4px 0px #00000b;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.hand-drawn-border:hover {
+  box-shadow: 6px 6px 0px #00000b;
+}
+
+.tilt-1 {
+  transform: rotate(0.8deg);
+}
+
+.tilt--1 {
+  transform: rotate(-0.8deg);
+}
+
+.paper-stack {
+  position: relative;
+}
+
+.paper-stack::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: #ffffff;
+  border: 2px solid #00000b;
+  border-radius: 6px 5px 8px 4px / 5px 8px 4px 7px;
+  transform: rotate(1.5deg) translate(4px, 4px);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15);
+}
+
+.paper-stack::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: #fcfbf7;
+  border: 1.5px solid #00000b;
+  border-radius: 3px 7px 4px 6px / 6px 4px 8px 5px;
+  transform: rotate(-1deg) translate(1px, 1px);
+}
+
+/* Custom Webkit scrollbar for premium vintage look */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #fbf9f4;
+  border-left: 2px solid #00000b;
+}
+::-webkit-scrollbar-thumb {
+  background: #78767d;
+  border: 2px solid #00000b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6B35;
+}
+
