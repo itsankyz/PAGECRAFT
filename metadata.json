@@ -1,0 +1,6 @@
+{
+  "name": "PageCraft",
+  "description": "Your PDFs, Perfectly Crafted. An artisan workshop for converting, merging, splitting, watermarking, and AI formatting documents.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,14 @@
+{
+  "installCommand": "npm install --include=dev",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "functions": {
+    "api/ai-format.ts": {
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    { "source": "/api/ai-format", "destination": "/api/ai-format" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
