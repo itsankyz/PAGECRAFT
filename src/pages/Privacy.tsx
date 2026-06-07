@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Feather, ArrowLeft, Shield, Eye, Database, Globe, Mail } from 'lucide-react';
+import { ArrowLeft, Shield, Eye, Database, Globe, Mail } from 'lucide-react';
 
 export default function Privacy() {
   return (
@@ -11,8 +11,8 @@ export default function Privacy() {
       <header className="border-b-2 border-[#00000b]/10 bg-[#fbf9f4] sticky top-0 z-40">
         <div className="max-w-[1280px] mx-auto px-4 md:px-16 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-[#00000b] flex items-center justify-center rounded-sm">
-              <Feather className="w-4 h-4 text-[#FF6B35]" />
+            <div className="w-8 h-8 rounded-sm overflow-hidden border border-[#00000b]/20">
+              <img src="/logo.jpeg" alt="PageCraft logo" className="w-full h-full object-cover" />
             </div>
             <span className="font-label-accent text-lg font-bold text-[#00000b]">PageCraft</span>
           </Link>

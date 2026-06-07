@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Feather } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -8,8 +7,8 @@ export default function Footer() {
       <div className="max-w-[1280px] mx-auto px-4 md:px-16 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
         <div className="flex flex-col items-center md:items-start gap-3">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-[#00000b] text-[#fbf9f4] flex items-center justify-center rounded-sm">
-              <Feather className="w-4 h-4 text-[#FF6B35]" />
+            <div className="w-8 h-8 rounded-sm overflow-hidden border border-[#00000b]/20">
+              <img src="/logo.jpeg" alt="PageCraft logo" className="w-full h-full object-cover" />
             </div>
             <span className="font-label-accent text-lg font-bold text-[#00000b]">
               PageCraft
