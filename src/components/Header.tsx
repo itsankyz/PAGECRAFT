@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Menu } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface HeaderProps {
   onScrollToDesk: () => void;

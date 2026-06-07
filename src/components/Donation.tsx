@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { Heart, Coffee, BatteryCharging, PenTool, Sparkles, Trophy } from 'lucide-react';
 
@@ -10,6 +11,7 @@ interface Supporter {
 }
 
 export default function Donation() {
+  const navigate = useNavigate();
   const [selectedPreset, setSelectedPreset] = useState<number | null>(9);
   const [customAmount, setCustomAmount] = useState<string>('');
   const [supporterName, setSupporterName] = useState<string>('');
@@ -57,28 +59,7 @@ export default function Donation() {
 
   const handleSubmitDonation = (e: React.FormEvent) => {
     e.preventDefault();
-    const finalAmount = getActiveAmount();
-    if (finalAmount <= 0) {
-      alert('Please select or input a valid support amount.');
-      return;
-    }
-
-    // Success State
-    setDonationSuccess(true);
-
-    // Add to Supporters board (virtual ledger)
-    const newSupporter: Supporter = {
-      name: sanitize(supporterName) || 'Anonymous Patron',
-      amount: finalAmount,
-      message: sanitize(supporterMsg) || 'A generous supporter of local craftsmanship!',
-      date: 'Just Now'
-    };
-
-    setRecentSupporters((prev) => {
-      const updated = [newSupporter, ...prev];
-      localStorage.setItem('pagecraft_supporters', JSON.stringify(updated));
-      return updated;
-    });
+    navigate('/donate');
   };
 
   const resetForm = () => {

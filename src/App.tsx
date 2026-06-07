@@ -11,6 +11,7 @@ import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import Support from './pages/Support';
 import Contact from './pages/Contact';
+import Donate from './pages/Donate';
 import { ToolMode } from './types';
 import { Layers, Feather } from 'lucide-react';
 
@@ -145,6 +146,7 @@ export default function App() {
         <Route path="/terms" element={<Terms />} />
         <Route path="/support" element={<Support />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/donate" element={<Donate />} />
       </Routes>
     </BrowserRouter>
   );
