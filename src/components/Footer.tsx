@@ -17,6 +17,9 @@ export default function Footer() {
           <p className="font-mono text-xs text-[#78767d]">
             © {new Date().getFullYear()} PageCraft. Handcrafted for the digital era.
           </p>
+          <a href="https://www.producthunt.com/products/pagecraft?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-pagecraft" target="_blank" rel="noopener noreferrer">
+            <img alt="PageCraft - format- convert- deliver | Product Hunt" width="200" height="43" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1166193&theme=light&t=1780994459989" />
+          </a>
         </div>
 
         <div className="flex gap-8">
